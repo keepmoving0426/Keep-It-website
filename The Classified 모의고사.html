@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Keep It N제</title>
+    <style>
+      hr{ border: 1px solid black;}
+
+      h1{ text-align : center;
+          font-size: 3em;}
+
+      h2{ font-size: 3em;
+        text-align : center;}
+
+      li{ font-size: 1.5em;
+          margin-bottom: 40px;}
+
+      p{ font-size: 1.5em;
+         text-align : center;
+         line-height: 2.5;}
+
+      #grid { display: grid;
+              grid-template-columns:380px 1fr;}
+
+      #grid2 {border-left: 1px solid black;
+      font-size: 2em;}
+
+      a{ text-decoration:none;}
+      a:link { color: black; }
+
+  		a:visited { color: black; }
+
+  		a:hover { color: blue; }
+    </style>
+  </head>
+  <body>
+
+
+    <h1> <a href = "Keep It 수학 연구소.html">Keep It 수학 연구소</a></h1>
+
+    <hr>
+
+    <div id="grid">
+      <ol>
+        <li><a href="Keep It 인사말.html">인사말</a></li>
+        <li><a href="Keep It 공지사항.html">공지사항</a></li>
+        <li><a href="keep It 연구원 소개.html">Keep It 수학 연구원 소개</a></li>
+        <li><a href="Keep It N제.html">Keep It N제</a></li>
+        <li><a href="The Classified 모의고사.html">The Classified 모의고사</a></li>
+      </ol>
+
+    <div id="grid2">
+      <p><u><a href="#" id="download-link" download="The Classified 모의고사 1회_완성본.pdf">The Classified 모의고사 1회 (문제지, 답지) 다운로드하기</a></u>
+        <script>
+          document.getElementById('download-link').addEventListener('click', function() {
+            // 파일 내용을 생성합니다. 여기서는 간단한 텍스트 파일을 생성합니다.
+            var fileContent = 'This is an example text file.';
+
+            // Blob을 생성합니다.
+            var blob = new Blob([fileContent], { type: 'text/plain' });
+
+            // Blob을 URL로 변환합니다.
+            var blobUrl = window.URL.createObjectURL(blob);
+
+            // 다운로드 링크의 href 속성을 설정하여 다운로드를 유도합니다.
+            document.getElementById('download-link').setAttribute('href', blobUrl);
+          });
+        </script></p>
+      </div>
+    </div>
+  </body>
+</html>
